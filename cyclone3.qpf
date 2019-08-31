@@ -26,5 +26,5 @@ QUARTUS_VERSION = "11.1"
 DATE = "12:58:05  September 03, 2012"
 
 # Revisions
-
+PROJECT_REVISION = "m2bis_6K_LE"
 PROJECT_REVISION = "cyclone3"
