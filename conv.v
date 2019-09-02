@@ -6,6 +6,10 @@ module conv(
 );
 
 assign a9  = { |a16[15:8], a16[7:0]};
-assign b16 = { b9[8] ? 8'h1F : 8'h00, b9[7:0]};
+
+wire [7:0]char_color;
+assign char_color = b9[8] ? 8'h1F : 8'h00;
+
+assign b16 = { char_color, b9[7:0]};
 
 endmodule
