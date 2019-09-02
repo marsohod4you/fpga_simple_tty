@@ -1,0 +1,14 @@
+db
+incremental_db
+greybox_tmp
+*.rpt
+*.summary
+*.sof
+*.bak
+*.jdi
+*.done
+*.cdf
+*.smsg
+*.pin
+*.sld
+
