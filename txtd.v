@@ -153,14 +153,23 @@ rom_font my_rom_font(
 	.q( fnt_data )
 );
 
+wire [8:0]wrdata9;
+wire [8:0]rddata9;
+conv conv2(
+	.a16( wrdata ),
+	.a9( wrdata9 ),
+	.b9( rddata9 ),
+	.b16( scr_data)
+);
+
 screen2 my_screen2 (
-	.data( wrdata ),
+	.data( wrdata9 ),
 	.rdaddress( scr_addr ),
 	.rdclock( pixel_clock ),
 	.wraddress( wradr ),
 	.wrclock( pixel_clock ),
 	.wren( wren ),
-	.q( scr_data )
+	.q( rddata9 )
 );
 
 endmodule
